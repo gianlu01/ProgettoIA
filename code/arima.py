@@ -2,7 +2,6 @@ import pandas as pd
 import progressbar as pb
 
 from statsmodels.tsa.arima.model import ARIMA
-from matplotlib import pyplot as plt
 from math import sqrt
 from sklearn.metrics import mean_squared_error
 
@@ -83,8 +82,6 @@ def ARIMA_Predictions(data: pd.DataFrame):
         obs = test[x]
         history.append(obs)
         bar.update(x)
-
-        #print('predicted=%f, expected=%f' % (pred, obs))
 
     bar.finish()
     sqm = sqrt(mean_squared_error(test, predictions))

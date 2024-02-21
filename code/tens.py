@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 
-from matplotlib import pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 from tensorflow.keras.models import Sequential
@@ -71,7 +70,6 @@ def TENSORFLOW_Prediction(data : pd.DataFrame):
 
     test = scaled_data[lunghezza - PREDICTION_DAY:, :]
     test_x = []
-    #test_y = scaled_data[int(SIZE*lunghezza):, :]
     test_y = data.values[lunghezza:]
 
     for a in range(PREDICTION_DAY, len(test)):
