@@ -61,6 +61,7 @@ def ARIMA_Analisys(data: pd.DataFrame) -> None:
     print(residuals.describe())
 
 
+
 def ARIMA_Predictions(data: pd.DataFrame):
 
     values = data.values

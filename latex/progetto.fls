@@ -1,8 +1,8 @@
-PWD /Users/gianluca/Documents/OneDrive - Università degli Studi di Milano-Bicocca/Informatica/Intelligenza Artificiale/Progetto/latex
+PWD /Users/gianluca/Documents/OneDrive - Università degli Studi di Milano-Bicocca/Informatica/Intelligenza Artificiale/Progetto/ProgettoIA/latex
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/gianluca/Documents/OneDrive - Università degli Studi di Milano-Bicocca/Informatica/Intelligenza Artificiale/Progetto/latex/progetto.tex
+INPUT /Users/gianluca/Documents/OneDrive - Università degli Studi di Milano-Bicocca/Informatica/Intelligenza Artificiale/Progetto/ProgettoIA/latex/progetto.tex
 OUTPUT progetto.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls

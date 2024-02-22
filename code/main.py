@@ -20,6 +20,8 @@ def get_data() -> yf.Ticker:
 
     return yf.Ticker(input("Quale titolo vuoi scaricare?\n"))
 
+
+
 def main():
     
     data = get_data()
@@ -53,11 +55,7 @@ def main():
     plt.plot(history[int(len(history.values)*SIZE):].index, history.values[int(len(history.values)*SIZE):], color = "blue")
     plt.legend(['ARIMA', 'Tensorflow', 'Stock Data'])
     plt.show()
-    
 
-
-    
-    
 
 
 main()

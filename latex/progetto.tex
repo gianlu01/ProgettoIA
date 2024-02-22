@@ -51,14 +51,15 @@
         \item LSTM: rete neurale ricorrente (\textit{RNN - Recurrent Neural 
         Network}) applicabile a processi di classificazione, serie temporali e 
         predizione. Una unità LSTM (\textit{LSTM - Long Short Term Memory}) è 
-        componsto una singola cella con un input, un output e un \textit{forget
-        gate}. La cella ricorda i valori di una serie temporale arbitraria e 
-        l'input e il forget regolano il flusso di informazioni entranti nella
-        singola cella. Il forget decide quale informazione deve essere scartata
-        confrontando lo stato precedente con il valore attuale ed assegnandoli
-        un valore [0, 1]. L'input decide quale parte di informazioni mantenere
-        mentre l'output (come detto dal nome stesso), lascia passare un valore
-        (basato sull'input e sul forget).\footnote[2]{fonte: Wikipedia/LSTM}
+        composta da una singola cella con un input, un output e un 
+        \textit{forget gate}. La cella ricorda i valori di una serie temporale 
+        arbitraria e l'input e il forget regolano il flusso di informazioni 
+        entranti nella singola cella. Il forget decide quale informazione deve 
+        essere scartata confrontando lo stato precedente con il valore attuale 
+        ed assegnandoli un valore [0, 1]. L'input decide quale parte di 
+        informazioni mantenere mentre l'output (come detto dal nome stesso), 
+        lascia passare un valore (basato sull'input e sul 
+        forget).\footnote[2]{fonte: Wikipedia/LSTM}
 
     \end{itemize}
 
@@ -91,7 +92,7 @@
     ARIMA mentre l'altro tramite Tensorflow (LSTM). Per entrambi è possibile 
     impostare un iperparametro \lstinline|SIZE| il quale identifica come 
     verranno suddivisi i dati. Precisamente \lstinline|SIZE| è un valore
-    in percentuale che indentifica la porzione di dati riservata alla fase
+    in percentuale che identifica la porzione di dati riservata alla fase
     di \textit{training} del modello (ARIMA/Tensorflow LSTM), il restante
     verrà utilizzato come porzione di \textit{test}.
 
@@ -210,7 +211,7 @@
     Ai fini di un confronto più accurato proveremo vari settaggi di vari 
     iperparametri per entrambi. Partiremo con dei valori di default per poi 
     incrementarli ad ogni confronto effettuato. Entrambi utilizzeranno un 
-    rapporto 0.70 di size.
+    rapporto di size uguale a 0.70.
 
         \subsection{Primo confronto}
             \subsubsection{Analisi ARIMA} I valori utilizzati di default sono i
@@ -371,12 +372,12 @@
     come EPOCHS e SIZE, gran parte della precisione è affidata 
     all'iperparametro UNITS (che regola la dimensione di una singola cella 
     LSTM): notiamo difatti come aumentando la UNITS, a discapito della stessa
-    SIZE per ogni confronto, vediamo come la dimensione degli input aumenta
+    SIZE per ogni confronto, la dimensione degli input aumenta
     (da KB a MB) dato che, aumentando la complessità della cella, aumenta la
     complessità generale di come gli input vengono combinati ottenendo
     cammini computazionali più complessi e aumentando la precisione finale.
     L'iperparametro DROPOUT permette di scartare una serie di dati espressa in
-    percentuale [0, 1] alleggerendo l'addestramento, esso è comunque 
+    percentuale [0, 1] alleggerendo l'addestramento: esso è comunque 
     strettamente legato a UNITS difatti riducendo il suo valore verranno 
     scartati meno elementi. Ricollegandosi quindi a quanto detto 
     precedentemente, scartando meno dati, manteniamo cammini computazionali più
